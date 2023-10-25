@@ -1,19 +1,27 @@
+:root {
+    --background-color: #FFF;
+    --IRIS: #4D5AE5;
+    --NAVY-BLUE: #2E2F42;
+    --CLOUD: #F4F4FD;
+    --SLATE: #434455;
+
+    /* Timing */
+    --duration: 250ms;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
 body{
     font-family:'Roboto', sans-serif;
     color: var(--SLATE) ;
    background-color: #FFFFFF;
 }
 
-
-
-:root{
---background-color: #FFF;
---IRIS: #4D5AE5;
---NAVY-BLUE: #2E2F42;
---CLOUD: #F4F4FD;
---SLATE: #434455;
-
+.main {
+    flex-grow: 1;
 }
+
+
 
 a:hover,
 a:focus{
@@ -123,8 +131,9 @@ justify-content: space-between;
 align-items: center;
 gap: 40px;
 box-sizing: border-box;
-
 }
+
+
 
 .header-logo {
     font-family: "Raleway", sans-serif;
@@ -199,8 +208,6 @@ display: inline-flex;
      padding: 0;
 }
 
-
-
 .contact{
     font-weight: 400;
     font-size: 16px;
@@ -216,6 +223,22 @@ display: inline-flex;
 .contact:focus {
     color: #404bbf;
     cursor: pointer;
+}
+
+.current {
+    position: relative;
+    color: #404BBF;
+}
+
+.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404BBF;
 }
 
 /*--HERO SECTION--*/
