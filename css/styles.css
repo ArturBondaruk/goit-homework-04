@@ -4,6 +4,7 @@
     --NAVY-BLUE: #2E2F42;
     --CLOUD: #F4F4FD;
     --SLATE: #434455;
+    --OCEAN: #404BBF;
 
     /* Timing */
     --duration: 250ms;
@@ -110,7 +111,9 @@ img {
 
 .header {
 border-bottom: 1px solid #e7e9fc;
-
+box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
 border-bottom: 1px solid var(--CORNFLOWER, #E7E9FC);
@@ -132,8 +135,6 @@ align-items: center;
 gap: 40px;
 box-sizing: border-box;
 }
-
-
 
 .header-logo {
     font-family: "Raleway", sans-serif;
@@ -176,6 +177,7 @@ gap: 40px;
     display: block;
 padding-top: 24px;
 padding-bottom: 24px;
+color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-list-link:hover
 .header-list-link:focus {
@@ -200,6 +202,7 @@ gap: 40px;
 
 .header-address-list{
 display: inline-flex;
+color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list {
@@ -247,7 +250,17 @@ display: inline-flex;
     padding-top: 188px;
     padding-bottom: 188px;
     display: flex;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+     rgba(46, 47, 66, 0.7)), 
+     url(../images/peopleoffice.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+max-width: 1440px;
+margin: 0 auto;
 }
+
 
 .hero-title {
     font-size: 56px;
@@ -277,6 +290,7 @@ margin-bottom: 48px;
     height: 56px;
     border: none;
     border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -293,9 +307,21 @@ background-color: #404BBF;
 
 .benefits {
     padding: 120px 0;
-padding-bottom: 120px;
-    
-    }
+padding-bottom: 120px; 
+}
+
+.benefits-list-item-icons {
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
+    background-color: var(--CLOUD);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.benefits-icons {}
 
 
 .benefits-socials {
@@ -388,13 +414,20 @@ gap: 24px;
     background-color: #FFF;
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-card-container{
 
 }
 
 .team-name-container{
-    padding: 32px 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 
@@ -414,12 +447,14 @@ margin-bottom: 8px;
 
 .team-list-icons{
     display: flex;
+    justify-content: center;
     gap: 24px;
 }
 
 .team-icons{
 width: 40px;
 height: 40px;
+
 }
 .team-icons-link{
     display: flex;
@@ -439,6 +474,66 @@ height: 40px;
 .svg-team{
     fill: var(--CLOUD);
 }
+
+/* Section 5 */
+
+.customers-section {
+    padding-bottom: 120px;
+    padding-top: 120px;
+}
+
+.customers-title {
+    color: var(--primery-text-color);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+.customers-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.customers-list-item {
+    width: 168px;
+    height: 88px;
+}
+
+.customers-links {
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color var(--duration) var(--timing-function),
+        color var(--duration) var(--timing-function);
+    color: var(--fill-customer-color);
+}
+
+.customers-icons {
+    fill: #8e8f99;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers-links:hover,
+.customers-links:focus {
+    border-color: var(--OCEAN);
+    color: var(--OCEAN);
+}
+
+.customers-icons:hover,
+.customers-icons:focus {
+    fill: var(--OCEAN);
+}
+
 /*< !-- Footer-->*/
 
 .footer {
